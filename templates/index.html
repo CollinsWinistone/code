@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <!-- <link rel="stylesheet" href="{% static 'test/test.css' %}">-->
+</head>
+<body>
+    
+
+
+    {% block content %}
+
+    <!--job display design-->
+    {% for job in jobs  %}
+    <div id="main">
+
+        <!-- profile info div-->
+        <div class="profile_info">
+            <div id="profile_pic" class="same">
+                <!-- the picture associated with the job-->
+                <img src="{{job.job_image.url}}" alt="" class="profile_image">
+
+            </div>
+            <!--job name display-->
+            <div id="username" class="same">
+                <a href="{% url 'job:aboutjob' job.id %}" class="same" id="username">{{job.job_name}}</a>
+                
+            </div>
+        </div>
+
+        
+
+        <div class="job">
+            {% for desc in job.description_set.all %}
+
+            <li>{{desc}}</li>
+
+        {% endfor %}
+
+        <hr>
+        </div>
+    </div>
+
+    {% endfor %}
+
+    {% endblock %}
+    
+
+    
+    
+
+   
+</body>
+</html>

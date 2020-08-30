@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>CODEMY</h3>
+    <blockquote>
+        Register to join this amazing economy building community
+    </blockquote>
+    <!-- Registration form-->
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="First Name" name="first_name">
+        <input type="text" placeholder="First Name" name="last_name">
+        <input type="text" placeholder="Username" name="username">
+        <input type="text" placeholder="Password" name="password">
+        <input type="text" placeholder="Email" name="email">
+        
+        
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

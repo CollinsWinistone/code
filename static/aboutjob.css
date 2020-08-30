@@ -1,0 +1,47 @@
+/* --jobs profile picture --*/
+.aboutjob_jobimage
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+/*--user details--*/
+.aboutjobs_inline
+{
+    display: inline;
+    position: relative;
+    bottom: 30px;
+    margin-left: 30px;
+}
+
+/*--display content bloc --*/
+.displaycontent
+{
+    margin-left: 130px;
+    background-color: darkslategrey;
+    border-radius: 30px;
+    padding: 5%;
+}
+
+/*--display of job name--*/
+.aboutjobs_jobname
+{
+    width: 100%;
+    background-color: purple;
+    color: orange;
+    font-size: 20pt;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+}
+
+.aboutjobs_description_header
+{
+    color: yellow;
+}
+
+.items
+{
+    color: white;
+}

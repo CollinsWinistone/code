@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--container for job details-->
+<div class="job_details">
+
+    <div class="job_profile"> 
+
+        
+        <div class="job_pic" >
+            <!--specific for jobs picture-->
+            <img src="{{job.job_image.url}}" alt="" class="aboutjob_jobimage inline">
+            <h3 class="aboutjobs_inline">posted by {{job.posted_by.first_name}} {{job.posted_by.last_name}}</h3>
+    
+        </div>
+
+        <div class="displaycontent">
+
+            
+
+            <div class="aboutjobs_jobdescription">
+                <!--the name of the job-->
+                <div class="aboutjobs_jobname">
+                    <p>{{job.job_name}}</p>
+    
+                </div>
+
+                <!-- the description for the job -->
+                <div class="aboutjobs_jobdescription">
+
+                    <h3 class="aboutjobs_description_header">description</h3>
+
+                    <!-- display all job description -->
+                    {% for desc in job.description_set.all %}
+
+                        <li class="items">{{desc}}</li>
+
+                    {% endfor %}
+
+                </div>
+
+                <!--job qualifications-->
+                <div class="aboutjobs_jobqualification">
+
+                    <h3 class="aboutjobs_description_header">qualifications</h3>
+
+                    <!--display all job qualification-->
+                    {% for q in job.qualification_set.all %}
+
+                        <li class="items">{{q}}</li>
+
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+
+</div>
+
+{% endblock %}
